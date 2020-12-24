@@ -1,0 +1,234 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Poiret One', cursive;
+}
+body{
+    margin: 0;
+}
+p, img{
+    margin: 0;
+    /*background-color: tomato;*/
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+/*Эффект при наведении на ссылку*/
+a:hover{
+    color: #ed184a;
+}
+h1{
+    font-size: 40px;
+}
+/*----ЗАГОЛОВОК----*/
+.siteHead{
+    font-family: 'Poiret One', cursive;
+    font-weight: 700;
+    font-size: 20px;
+    /*font-family: 'Russo One', sans-serif;*/
+    position: relative;
+}
+.informBlock{
+    height: 150px;
+    position: relative;
+}
+/*Список пород*/
+.informBreed{
+    position: absolute;
+    left: 5%;
+    margin-top: 70px;
+    font-size: 20px;
+    font-weight: 700;
+}
+/*Таблица*/
+.informTable{
+    position: absolute;
+    left: 20%;
+    margin-top: 70px;
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 700;
+}
+/*Общая информация*/
+.inform{
+    /*background-color: tomato;*/
+    position: absolute;
+    left: 70%;
+    margin-top: 70px;
+    font-size: 20px;
+    font-weight: 700;
+    
+}
+.heart{
+    position: absolute;
+    left: 90%;
+    height: 70px;
+    margin-top: 20px;
+}
+/*Заголовок красивым шрифтом*/
+.textHeader{
+    position: absolute;
+    font-family: 'Pacifico', cursive;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: 25px;
+    font-size: 50px;
+    font-weight: 700;
+    /*background-color: red;*/
+}
+/* Обложка сайта*/
+.cover{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+/*----ТЕЛО САЙТА----*/
+.siteBody{
+    font-family: 'Poiret One', cursive;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 80px;
+    font-weight: 600;
+    text-align: justify;
+}
+/*----ТАБЛИЦА----*/
+.tableHeader{
+    font-family: 'Poiret One', cursive;
+    font-weight: 600;
+    margin-left: 80px;
+}
+.table{
+    margin-top: 0;
+}
+table{
+    font-weight: 600;
+    font-size: 16px;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border: none;
+}
+th{
+    text-align: center;
+    background-color: #ed184a41;
+}
+tr,td{
+    padding: 20px;
+    margin: 0;
+    border-bottom: 1px solid black;
+}
+.td1{
+    border-right: 1px solid black;
+    font-family: 'Russo One', sans-serif;
+    font-weight: 100;    
+}
+/*Заголовок таблицы*/
+caption{
+    font-family: 'Russo One', sans-serif;
+    font-weight: 100;  
+    font-weight: bold;
+	text-align: left;
+	border: none;
+	padding: 10px 15px;
+    background: #EDEDED;
+	font-size: 18px;
+    border-top: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+/*----СЛАЙДЕР----*/
+
+/* Собственно сам слайдер */
+.slider{
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+    height: 300px;
+    margin-bottom: 15px;
+}
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .item img {
+    object-fit: cover;
+    width: 100%;
+    height: 350px;
+    border: none !important;
+    box-shadow: none !important;
+}
+/* Кнопки вперед и назад */
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* При наведении на кнопки добавляем фон кнопок */
+.slider .prev:hover,.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* Заголовок слайда */
+.slideHeader {
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+    position: absolute;
+    color: #fff;
+    font-size: 50px;
+    /* Выравнивание текста по горизонтали и по вертикали*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* Тень*/
+    text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+}
+/* Кружочки */
+.slider-dots {
+    text-align: center;
+    margin-top: 60px;
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active,.slider-dots_item:hover {
+    background-color: #aaa;
+}
+/* Анимация слайдов */
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
